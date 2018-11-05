@@ -1,0 +1,12 @@
+{
+    "manifest_version":2,
+    "name":"Calculator",
+    "description": "A calculator extension",
+    "version":"1.0",
+    "icons":{
+        "16": "icons16.png",
+        "48": "icons48.png",
+        ""
+    }
+
+}
