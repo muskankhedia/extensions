@@ -34,15 +34,18 @@ $(function() {
             else if(val != "=")
             {
                 $("input:text").val(num + val);
-                total = num;
-                num = 0;
                 operator = val;
+                total = oper(operator,total,num);
+                num = 0;
+                
             }
 
             if(val == "=")
             {
                 total = oper(operator,total,num);
-                $("input:text").val(total);        
+                num = 0;
+                $("input:text").val(total);       
+                total =0; 
             }
         }
     });
@@ -61,6 +64,10 @@ function oper(op,t,n){
     }
     if (op == "*")
     {
+        if(t==0)
+        {
+            t=1;
+        }
         t = t*n;
         return t;
     }
