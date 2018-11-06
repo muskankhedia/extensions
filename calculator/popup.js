@@ -31,37 +31,12 @@ $(function() {
                 total = 0;
                 num =0;
             }
-            else if(val == "+")
+            else if(val != "=")
             {
-                $("input:text").val(num + '+');
+                $("input:text").val(num + val);
                 total = num;
                 num = 0;
-                operator = "+";
-            }
-            else if(val == "-")
-            {
-                $("input:text").val(num + '-');
-                total = num;
-                num = 0;
-                operator = "-";
-            }
-            else if(val == "*")
-            {
-                $("input:text").val(num + '*');
-                total = num;
-                num = 0;
-                operator = "*"
-            }
-            else if(val == "/")
-            {
-                $("input:text").val(num + '/');
-                total = num;
-                num = 0;
-                operator = "/"
-            }
-            else
-            {
-                $("input:text").val('0');
+                operator = val;
             }
 
             if(val == "=")
@@ -96,7 +71,6 @@ function oper(op,t,n){
     }
 
 }
-
 
 
 // $(function() {
